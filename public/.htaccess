@@ -1,0 +1,7 @@
+# Apache: arahkan semua request non-file ke index.php
+RewriteEngine On
+# URL /assets adalah halaman aplikasi, sementara file statis berada di /assets/*
+RewriteRule ^assets/?$ index.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

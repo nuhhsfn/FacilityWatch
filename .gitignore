@@ -1,0 +1,3 @@
+storage/requests.log
+public/uploads/*
+!public/uploads/.gitkeep

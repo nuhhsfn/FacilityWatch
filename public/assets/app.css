@@ -1,0 +1,13 @@
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
+dialog[open]{animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}}
+#bnav{transition:transform .25s}#bnav.hide{transform:translateY(130%)}
+/* Tabel -> kartu di layar kecil (label diisi oleh app.js) */
+@media (max-width:767px){
+  .rtable,.rtable tbody{display:block}
+  .rtable thead{display:none}
+  .rtable tr{display:block;margin:.75rem;padding:.5rem .9rem;border-radius:1rem;background:#faf6f3}
+  .rtable td{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.4rem 0!important;text-align:right}
+  .rtable td::before{content:attr(data-label);color:#8a8497;font-size:.75rem;text-align:left;flex-shrink:0}
+}
